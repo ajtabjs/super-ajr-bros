@@ -13,7 +13,7 @@ body{
 
 @font-face{
     font-family: 'LankyTails';
-    src: url('font/LankyTails.ttf')
+    src: url('./font/LankyTails.ttf')
 }
 
 #useFont{

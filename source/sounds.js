@@ -26,7 +26,7 @@ export class Sounds {
 
     loadSounds(url){
         var theSound = new Howl({
-            src: ['/clients/ajr/templates/splash/ajr/game/source/sounds/'+url+".mp3"]
+            src: ['source/sounds/'+url+".mp3"]
         });
         theSound.on('load', (event) => {
             theSound.name=url;
