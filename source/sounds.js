@@ -14,7 +14,7 @@ export class Sounds {
         ];
         this.songNum = 0;
         this.playing = false;
-        this.currentSongFile = './sounds/levelMusic.mp3';
+        this.currentSongFile = './source/sounds/levelMusic.mp3';
         this.curSound = 0;
         this.soundLength = 0;
 
