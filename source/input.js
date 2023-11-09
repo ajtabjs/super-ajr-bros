@@ -123,12 +123,12 @@ export class Input {
                 for (var j = 0; j < this.ongoingTouches.length; j++) {
 
                     if (evt.touches[i].identifier === this.ongoingTouches[j].identifier) {
-                        found = true;
+                        found = false;
                     }
 
                 }
 
-                if (found === false) {
+                if (found === true) {
                     this.ongoingTouches.push(evt.touches[i]);
                 }
             }
