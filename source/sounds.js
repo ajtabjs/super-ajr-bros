@@ -9,19 +9,35 @@ export class Sounds {
             this.loadSounds(this.soundArray[i]);
         }
 
-        this.songs = [];
+         this.songs = [
+            new Howl({ src: ['source/sounds/levelMusic.mp3'] }),  // Replace with your actual song file
+            
+        ];
         this.songNum = 0;
         this.playing = false;
         this.currentSongFile = './sounds/levelMusic.mp3';
         this.curSound = 0;
         this.soundLength = 0;
 
-        this.songFiles=[];
-
-        for(var i=1; i<this.songs.length; i++){
+          this.songFiles = [];
+        for (var i = 0; i < this.songs.length; i++) {
             this.songFiles.push(1);
         }
+    }
 
+    playSong() {
+        if (this.e.soundOn === true && this.songs.length > 0) {
+            if (!this.playing) {
+                this.songs[this.songNum].play();
+                this.playing = true;
+
+                // Optionally, you can add an event listener to handle when the song finishes
+                this.songs[this.songNum].on('end', () => {
+                    this.playing = false;
+                    // Logic to handle what to do when the song ends
+                });
+            }
+        }
     }
 
     loadSounds(url){
