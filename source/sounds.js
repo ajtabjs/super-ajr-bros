@@ -2,7 +2,7 @@ export class Sounds {
 
     setUp(e) {
         this.e=e;
-        this.soundArray = ["freeLife","flagpole","bump","coin","die","fireball","jump","kick","powerup","powerupAppears","stageWon","stomp","powerdown","breakblock","fireworks","bowserFall"];
+        this.soundArray = ["freeLife","levelMusic", "flagpole","bump","coin","die","fireball","jump","kick","powerup","powerupAppears","stageWon","stomp","powerdown","breakblock","fireworks","bowserFall"];
         this.loadedSounds = [];
 
         for(var i=0; i<this.soundArray.length; i++){
@@ -12,14 +12,14 @@ export class Sounds {
         this.songs = [];
         this.songNum = 0;
         this.playing = false;
-        this.currentSongFile = null;
+        this.currentSongFile = './sounds/levelMusic.mp3';
         this.curSound = 0;
         this.soundLength = 0;
 
         this.songFiles=[];
 
-        for(var i=0; i<this.songs.length; i++){
-            this.songFiles.push(null);
+        for(var i=1; i<this.songs.length; i++){
+            this.songFiles.push(1);
         }
 
     }
