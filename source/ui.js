@@ -1184,13 +1184,13 @@ export class UI {
     start(){
 
         this.peakHeight=0;
-        this.xspeed=30;
+        this.xspeed=25;
         this.yspeed=0;
-        this.gravity=10;
+        this.gravity=15;
         this.speedInc=10;
-        this.maxSpeedX=30;
+        this.maxSpeedX=25;
         this.maxSpeedY=12;
-        this.jumpHeight=10.69420;
+        this.jumpHeight=12.69420;
         this.footDistance=50;
         this.playerHeight=120;
         this.jumping=false;
@@ -1730,12 +1730,17 @@ export class UI {
     this.e.s.p("jump");
     this.yspeed = -this.jumpHeight;
     this.jumping = true;
-    this.peakHeight = this.player.position.y;
+     this.peakHeight = this.player.position.y;
+    this.jumping = false;
+    setTimeout(() => {
+          this.jumping = true;
+    }, 100);
+   
 
     // Set a timeout to reset jumping after 0.5 seconds
     setTimeout(() => {
-        this.jumping = false;
-    }, 700);
+    }, 3200);
+
 }
 
 
