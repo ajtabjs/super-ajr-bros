@@ -1184,14 +1184,14 @@ export class UI {
     start(){
 
         this.peakHeight=0;
-        this.xspeed=0;
+        this.xspeed=30;
         this.yspeed=0;
-        this.gravity=90;
-        this.speedInc=3;
-        this.maxSpeedX=12;
+        this.gravity=10;
+        this.speedInc=10;
+        this.maxSpeedX=30;
         this.maxSpeedY=12;
-        this.jumpHeight=35;
-        this.footDistance=20;
+        this.jumpHeight=10.69420;
+        this.footDistance=50;
         this.playerHeight=120;
         this.jumping=false;
 
@@ -1255,7 +1255,7 @@ export class UI {
         //     this.player.position.x=47900
         // }
 
-        if(this.noteCount>=100){
+        if(this.noteCount>=69){
             this.noteCount=0;
             this.notesAction="set"
             this.p1Alive=true;
@@ -1726,12 +1726,18 @@ export class UI {
                 // --- controls y --------------------------------------------------------
                 // --- controls y --------------------------------------------------------
 
-                if(this.jumping===false && this.e.input.keyUp===true){
-                    this.e.s.p("jump")
-                    this.yspeed=-this.jumpHeight;
-                    this.jumping=true;
-                    this.peakHeight=this.player.position.y;
-                }
+                if (this.jumping === false && this.e.input.keyUp === true) {
+    this.e.s.p("jump");
+    this.yspeed = -this.jumpHeight;
+    this.jumping = true;
+    this.peakHeight = this.player.position.y;
+
+    // Set a timeout to reset jumping after 0.5 seconds
+    setTimeout(() => {
+        this.jumping = false;
+    }, 700);
+}
+
 
                 this.yspeed+=this.gravity*this.e.dt;
                 this.applyY=this.yspeed*this.e.dt*this.speed;
@@ -1885,7 +1891,7 @@ export class UI {
 
                     if(this.e.input.mouseIsDown===true || this.e.input.keySpace===true){
 
-                        if(this.fireballWait>.5){
+                        if(this.fireballWait>0){
 
                             this.fireballWait=0;
 
