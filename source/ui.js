@@ -1896,7 +1896,7 @@ export class UI {
 
                     if(this.e.input.mouseIsDown===true || this.e.input.keySpace===true){
 
-                        if(this.fireballWait>0){
+                        if(this.fireballWait>0.2){
 
                             this.fireballWait=0;
 
