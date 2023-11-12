@@ -22,6 +22,14 @@ var level1 = new Level1();
 var input = new Input();
 var particles = new Particles();
 
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "N" || event.key === "n") {
+                sounds.skipToNextSong();
+            }
+        });
+  
+
 var engine = new Engine(
   "",
   false,
