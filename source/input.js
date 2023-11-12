@@ -15,14 +15,6 @@ export class Input {
 
         console.log("add listeners")
 
-         document.addEventListener("keydown", event => {
-            if (event.key === "N" || event.key === "n") {
-                // n stands for ni-ckalodeon tv shows!
-                this.sounds.skipToNextSong();
-            }
-           
-        });
-
         document.addEventListener("keydown", event => {
 
             //---arrow keyes---------------------------------------
