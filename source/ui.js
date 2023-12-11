@@ -1734,9 +1734,7 @@ export class UI {
     this.jumping = false;
    
 
-    // Set a timeout to reset jumping after 0.5 seconds
-    setTimeout(() => {
-    }, 3200);
+    
 
 }
 
