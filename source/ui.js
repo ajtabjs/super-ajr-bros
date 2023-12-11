@@ -1726,10 +1726,9 @@ export class UI {
                 // --- controls y --------------------------------------------------------
                 // --- controls y --------------------------------------------------------
 
-                if (this.jumping === false && this.e.input.keyUp === true) {
+                if (this.e.input.keyUp === true) {
     this.e.s.p("jump");
     this.yspeed = -this.jumpHeight;
-    this.jumping = true;
      this.peakHeight = this.player.position.y;
     this.jumping = false;
    
