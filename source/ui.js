@@ -1732,9 +1732,6 @@ export class UI {
     this.jumping = true;
      this.peakHeight = this.player.position.y;
     this.jumping = false;
-    setTimeout(() => {
-          this.jumping = true;
-    }, 100);
    
 
     // Set a timeout to reset jumping after 0.5 seconds
